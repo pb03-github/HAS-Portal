@@ -1,0 +1,46 @@
+@import "../../index.scss";
+.Loading {
+  width: 80%;
+  margin: auto;
+  font-size: 15px;
+  padding: 10px;
+  color: $loading-color;
+}
+.Error {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  font-size: 15px;
+  color: $error-color;
+}
+
+.Complaints {
+  // background-color: rgb(255, 243, 237);
+  background-color: white;
+  height: 100vh;
+  overflow: auto;
+
+  .complaints-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // overflow: auto;
+    top: 15vh;
+
+    .no-complaints {
+      background-image: url("../../assets//complaintsBG.png");
+      background-repeat: no-repeat;
+      height: 50vh;
+      padding-top: 200px;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}

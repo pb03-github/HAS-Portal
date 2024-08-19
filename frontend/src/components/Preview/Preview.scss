@@ -1,0 +1,207 @@
+@import "../../index.scss";
+.Preview {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: $box-width;
+  margin: auto;
+  margin-bottom: 120px;
+
+  .Complaint {
+    display: flex;
+    padding: 10px 16px;
+    margin: 20px 0;
+    background-color: rgb(253, 249, 248);
+    font-size: 12px;
+    border-radius: $box-radius;
+
+    &.mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .Complaint-Img {
+      padding: 10px;
+      width: 20%;
+
+      &.mobile {
+        width: 80%;
+      }
+
+      .Image {
+        border: 2px rgb(77, 77, 76);
+        width: 100%;
+        border-radius: 5px;
+        object-fit: contain;
+
+        &.logo {
+          width: 75%;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px 0px;
+      }
+    }
+
+    .Complaint-Text {
+      padding: 20px;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .complaint-header {
+        .title {
+          font-weight: bold;
+          font-size: 20px;
+        }
+
+        .desc {
+          font-size: 14px;
+          padding: 10px 0;
+        }
+      }
+
+      .complaint-footer {
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .time {
+          font-size: 16px;
+        }
+
+        .status {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 5px 10px;
+          color: white;
+          border-radius: 5px;
+
+          &.POSTED {
+            background-color: rgb(253, 153, 47);
+          }
+
+          &.RESOLVED {
+            background-color: rgb(45, 167, 45);
+          }
+
+          &.REJECTED {
+            background-color: rgb(255, 69, 69);
+          }
+        }
+
+        .button {
+          padding: 5px 10px;
+          margin: 5px;
+          background-color: rgb(221, 172, 166);
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .assign-overlay {
+    width: 100%;
+
+    .roll-input {
+      outline: none;
+      border: 1px grey solid;
+      padding: 10px;
+      border-radius: 5px;
+      width: 80%;
+
+      &.error {
+        border: 1px red solid;
+
+        &::placeholder {
+          color: red;
+        }
+      }
+    }
+
+    .error-msg {
+      color: red;
+      margin: 7px 0;
+      font-size: 12px;
+    }
+  }
+
+  .action-overlay {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+
+    .proof {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .proofOfAction {
+        width: 70%;
+        margin: 12px 0;
+      }
+
+      .image {
+        height: 120px;
+
+        &.none {
+          display: none;
+        }
+      }
+    }
+
+    .select {
+      width: fit-content;
+      margin: 10px 0;
+    }
+  }
+
+  .success-overlay {
+    .button {
+      width: fit-content;
+      padding: 5px 10px;
+      margin: 5px 0;
+      background-color: rgb(221, 172, 166);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  .btns {
+    display: flex;
+
+    .assign-btn {
+      padding: 7px 12px;
+      background-color: rgb(218, 116, 116);
+      color: white;
+      font-weight: bold;
+      margin: 10px 10px;
+      width: fit-content;
+      cursor: pointer;
+    }
+
+    .cancel-btn {
+      color: red;
+      border: 1px red solid;
+      padding: 7px 12px;
+      margin: 10px 0;
+      font-weight: bold;
+      cursor: pointer;
+      width: fit-content;
+    }
+  }
+}
